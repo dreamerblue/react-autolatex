@@ -1,0 +1,62 @@
+{
+  "name": "react-autolatex",
+  "version": "1.0.0",
+  "description": "Auto-render LaTeX in React",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:js": "cross-env NODE_ENV=production rollup -c",
+    "build": "npm-run-all clean build:js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreamerblue/react-autolatex.git"
+  },
+  "keywords": [
+    "react",
+    "latex",
+    "katex",
+    "math"
+  ],
+  "author": "bLue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dreamerblue/react-autolatex/issues"
+  },
+  "homepage": "https://github.com/dreamerblue/react-autolatex#readme",
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
+  },
+  "dependencies": {
+    "katex": "^0.10.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.8.0",
+    "cross-env": "^5.2.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "jest": "^24.1.0",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-license": "^0.8.1",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.19.2",
+    "tslib": "^1.9.3",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.1"
+  }
+}
