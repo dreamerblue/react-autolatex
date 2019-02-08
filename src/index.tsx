@@ -1,8 +1,12 @@
 import * as React from 'react';
 import renderMathInElement from 'katex/dist/contrib/auto-render';
+import { RenderMathInElementOptions } from './KatexAutoRenderTypings';
+
+export * from './KatexAutoRenderTypings';
 
 interface AutoLaTeXProps {
   children: string;
+  options?: RenderMathInElementOptions;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -10,6 +14,14 @@ interface AutoLaTeXProps {
 class AutoLaTeX extends React.Component<AutoLaTeXProps> {
   static defaultProps: AutoLaTeXProps = {
     children: '',
+    options: {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "\\[", right: "\\]", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+      ],
+    },
     className: '',
     style: {},
   };
@@ -26,14 +38,7 @@ class AutoLaTeX extends React.Component<AutoLaTeXProps> {
     }
     renderMathInElement(
       this.container,
-      {
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "\\[", right: "\\]", display: true },
-          { left: "$", right: "$", display: false },
-          { left: "\\(", right: "\\)", display: false },
-        ],
-      },
+      this.props.options,
     );
   };
 

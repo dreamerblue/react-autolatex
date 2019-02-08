@@ -1,6 +1,6 @@
 {
   "name": "react-autolatex",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Auto-render LaTeX in React",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -38,6 +38,7 @@
     "katex": "^0.10.0"
   },
   "devDependencies": {
+    "@types/katex": "^0.10.0",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
     "cross-env": "^5.2.0",
