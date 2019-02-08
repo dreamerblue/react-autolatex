@@ -1,5 +1,7 @@
 # react-autolatex
 
+![](https://img.shields.io/npm/v/react-autolatex.svg?style=flat) ![](https://img.shields.io/npm/dm/react-autolatex.svg?style=flat) ![](https://img.shields.io/npm/types/react-autolatex.svg?style=flat) ![](https://img.shields.io/npm/l/react-autolatex.svg?style=flat)
+
 Auto-render LaTeX in React.
 
 Based on KaTeX. TypeScript declaration supported.
