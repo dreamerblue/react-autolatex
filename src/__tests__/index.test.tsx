@@ -71,4 +71,33 @@ describe('AutoLaTeX', () => {
     const wrapper = shallow(<AutoLaTeX style={{ backgroundColor: 'red' }}>{tex}</AutoLaTeX>);
     expect(wrapper.prop('style').backgroundColor).toBe('red');
   });
+
+  it('should update component if props change', () => {
+    const tex = '$\\frac{a}{b}$';
+    const wrapper = mount(<AutoLaTeX>{tex}</AutoLaTeX>);
+    const html = wrapper.html();
+    wrapper.setProps({ children: tex + '_changed' });
+    expect(wrapper.html()).not.toEqual(html);
+  });
+
+  it('should not update component if props does not change', () => {
+    const tex = '$\\frac{a}{b}$';
+    const props = {
+      children: tex,
+      options: {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false },
+        ],
+      },
+      className: '',
+      style: {},
+    };
+    const wrapper = shallow(<AutoLaTeX {...props} />);
+    const nextProps = JSON.parse(JSON.stringify(props));
+    // @ts-ignore
+    expect(wrapper.instance().shouldComponentUpdate(nextProps, {}, undefined)).toEqual(false);
+  });
 });
