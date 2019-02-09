@@ -1,9 +1,15 @@
 language: node_js
 node_js:
-  - "6"
-  - "8"
-  - "10"
+  - lts/*
+cache:
+  directories:
+    - node_modules
+before_install:
+  - npm update
+install:
+  - npm install
 script:
   - npm run tsc
   - npm run lint
   - npm test
+  - npm run codecov

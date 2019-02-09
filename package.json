@@ -7,12 +7,15 @@
   "browser": "dist/index.umd.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf dist",
+    "build:clean": "rimraf dist",
     "build:js": "cross-env NODE_ENV=production rollup -c",
-    "build": "npm-run-all clean build:js",
-    "test": "jest --config jest.config.js --coverage",
+    "build": "npm-run-all build:clean build:js",
     "tsc": "tsc --noEmit",
-    "lint": "tslint -p ./tsconfig.json"
+    "lint": "tslint -p ./tsconfig.json",
+    "test:clean": "rimraf coverage",
+    "test:all": "jest --config jest.config.js --coverage",
+    "test": "npm-run-all test:clean test:all",
+    "codecov": "codecov"
   },
   "files": [
     "dist"
@@ -45,6 +48,7 @@
     "@types/katex": "^0.10.0",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
+    "codecov": "^3.1.0",
     "cross-env": "^5.2.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",

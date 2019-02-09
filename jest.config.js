@@ -6,4 +6,6 @@ module.exports = {
     '**/__tests__/*.(ts|tsx|js)',
   ],
   snapshotSerializers: ['enzyme-to-json/serializer'],
+  coverageDirectory: './coverage/',
+  collectCoverage: true,
 };
