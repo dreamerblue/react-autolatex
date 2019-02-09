@@ -33,7 +33,14 @@ export default {
   plugins: [
     resolve(),
     typescript({
-      rollupCommonJSResolveHack: true
+      rollupCommonJSResolveHack: true,
+      tsconfigOverride: {
+        exclude: [
+          "node_modules",
+          "dist",
+          "**/__tests__",
+        ],
+      },
     }),
     commonjs(),
     license({
