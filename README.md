@@ -1,6 +1,6 @@
 # react-autolatex
 
-![](https://img.shields.io/npm/v/react-autolatex.svg?style=flat) ![](https://img.shields.io/npm/dm/react-autolatex.svg?style=flat) ![](https://img.shields.io/travis/dreamerblue/react-autolatex.svg?style=flat) ![](https://img.shields.io/codecov/c/github/dreamerblue/react-autolatex.svg?style=flat) ![](https://img.shields.io/npm/types/react-autolatex.svg?style=flat) ![](https://img.shields.io/npm/l/react-autolatex.svg?style=flat)
+![](https://img.shields.io/npm/v/react-autolatex.svg?style=flat) ![](https://img.shields.io/npm/dm/react-autolatex.svg?style=flat) ![](https://img.shields.io/travis/com/dreamerblue/react-autolatex.svg?style=flat) ![](https://img.shields.io/codecov/c/github/dreamerblue/react-autolatex.svg?style=flat) ![](https://img.shields.io/npm/types/react-autolatex.svg?style=flat) ![](https://img.shields.io/npm/l/react-autolatex.svg?style=flat)
 
 Auto-render LaTeX in React.
 

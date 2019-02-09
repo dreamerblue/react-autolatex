@@ -26,10 +26,11 @@ export default {
       globals: {
         react: 'React',
         'katex/dist/contrib/auto-render': 'renderMathInElement',
+        'lodash.isequal': 'isEqual',
       },
     },
   ],
-  external: ['react', 'katex/dist/contrib/auto-render'],
+  external: ['react', 'katex/dist/contrib/auto-render', 'lodash.isequal'],
   plugins: [
     resolve(),
     typescript({

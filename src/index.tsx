@@ -1,6 +1,7 @@
 import * as React from 'react';
 import renderMathInElement from 'katex/dist/contrib/auto-render';
 import { RenderMathInElementOptions } from './KatexAutoRenderTypings';
+import isEqual from 'lodash.isequal';
 
 export * from './KatexAutoRenderTypings';
 
@@ -47,7 +48,7 @@ class AutoLaTeX extends React.Component<AutoLaTeXProps> {
   }
 
   shouldComponentUpdate(nextProps: Readonly<AutoLaTeXProps>, nextState: Readonly<{}>, nextContext: any): boolean {
-    return this.props.children !== nextProps.children;
+    return !isEqual(this.props, nextProps);
   }
 
   componentDidUpdate(prevProps: Readonly<AutoLaTeXProps>, prevState: Readonly<{}>, snapshot?: any): void {
