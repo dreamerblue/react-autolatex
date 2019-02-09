@@ -5,7 +5,7 @@ import isEqual from 'lodash.isequal';
 
 export * from './KatexAutoRenderTypings';
 
-interface AutoLaTeXProps {
+export interface AutoLaTeXProps {
   children: string;
   options?: RenderMathInElementOptions;
   className?: string;
