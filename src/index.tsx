@@ -1,10 +1,11 @@
 import * as React from 'react';
-import renderMathInElement from 'katex/contrib/auto-render';
+import renderMathInElement from 'katex/dist/contrib/auto-render';
+import type renderMathInElementType from 'katex/contrib/auto-render';
 import isEqual from 'lodash.isequal';
 
 export interface AutoLaTeXProps {
   children: string;
-  options?: renderMathInElement.RenderMathInElementOptions;
+  options?: renderMathInElementType.RenderMathInElementOptions;
   className?: string;
   style?: React.CSSProperties;
 }
