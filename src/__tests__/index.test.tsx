@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { shallow, mount } from 'enzyme';
-import AutoLaTeX, { RenderMathInElementOptions } from '..';
+import AutoLaTeX from '..';
 
 describe('AutoLaTeX', () => {
   it('should render expressions with "$$" delimiter', () => {
@@ -50,7 +50,7 @@ describe('AutoLaTeX', () => {
 
   it('should render expressions with option "delimiters"', () => {
     const tex = 'multi delimiters: $$\\frac{a}{b}$$ \\[\\frac{a}{b}\\]  $\\frac{a}{b}$ \\(\\frac{a}{b}\\)';
-    const options: RenderMathInElementOptions = {
+    const options = {
       delimiters: [
         { left: "$$", right: "$$", display: false },
         { left: "$", right: "$", display: false },

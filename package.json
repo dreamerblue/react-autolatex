@@ -1,6 +1,6 @@
 {
   "name": "react-autolatex",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "Auto-render LaTeX in React",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -37,16 +37,16 @@
   },
   "homepage": "https://github.com/dreamerblue/react-autolatex#readme",
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
+    "katex": ">=0.10.0",
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "katex": "^0.10.0",
     "lodash.isequal": "^4.5.0"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.17",
     "@types/jest": "^24.0.0",
-    "@types/katex": "^0.10.0",
+    "@types/katex": "^0.16.7",
     "@types/lodash.isequal": "^4.5.3",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
@@ -56,6 +56,7 @@
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
     "jest": "^24.1.0",
+    "katex": "^0.16.9",
     "npm-run-all": "^4.1.5",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
